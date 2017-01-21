@@ -6,6 +6,7 @@
 #include <string>
 #include <ctime>
 #include <vector>
+#include <algorithm>
 
 #pragma once
 
@@ -15,6 +16,11 @@ namespace smallutils {
 		char intStr[50];
 		_itoa(i, intStr, 10);
 		return std::string(intStr);
+	}
+
+	static std::string replaceInString(std::string in, char del, char rep) {
+		std::replace(in.begin(), in.end(), del, rep);
+		return in;
 	}
 
 	// New ISO Standard Date/Time Formats

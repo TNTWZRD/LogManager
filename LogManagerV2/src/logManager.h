@@ -36,7 +36,7 @@ namespace logger {
 					std::cout << "[" << loggerName << "]: " << loggerString << std::endl;
 			}
 			fmanager::FileManager fman;
-			fman.appendFile(LogName, "[" + smallutils::getISOTimeStamp() + "][" + loggerName + "]: " + loggerString);
+			fman.appendFile(LogName, "[" + smallutils::replaceInString(smallutils::getISOTimeStamp(), ':', '-') + "][" + loggerName + "]: " + loggerString);
 		}
 
 		// Constructor
@@ -48,7 +48,7 @@ namespace logger {
 			CustomEnabled = customEnabled;
 			fmanager::FileManager fman;
 			if (useDate)
-				LogName = fileLoc + std::string(smallutils::getISOTimeStamp()) + ".log";
+				LogName = fileLoc + smallutils::replaceInString(smallutils::getISOTimeStamp(), ':', '-') + ".log";
 			else
 				LogName = "LogFile.log";
 			fman.writeFile(LogName, " --- Log File Initialized --- \n");
