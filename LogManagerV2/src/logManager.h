@@ -48,16 +48,29 @@
 
 #include <string>
 #include <iostream>
-#include "fileManager.h" // FileManager: https://gist.github.com/TNTWZRD/21312e50e2ee05c37c83f97f6cfa8ea0 
-#include "smallUtils.h" // SmallUtils: https://gist.github.com/TNTWZRD/bb47e98b0dc6d12d83d526fce9ec454d
+#include "fileManager.h"
+#include "smallUtils.h"
 
 #pragma once
 
 namespace logger {
 
-	enum AllLogs { AllOn, AllOff };
-	enum DefualtLogs { DefualtOn, Info, Warning, Error, Debug, DefualtOff };
-	enum CustomLogs { CustomOn, CustomOff };
+	enum AllLogs { 
+		AllOn, 
+		AllOff 
+	};
+	enum DefualtLogs { 
+		DefualtOn = 1, 
+		Info = 2, 
+		Warning = 3, 
+		Error = 4, 
+		Debug = 5, 
+		DefualtOff = 0 
+	};
+	enum CustomLogs { 
+		CustomOn, 
+		CustomOff 
+	};
 
 	class LogManager {
 	public:
@@ -89,18 +102,14 @@ namespace logger {
 				LogLevel = Debug;
 			else
 				LogLevel = logLevel;
+
 			CustomEnabled = customEnabled;
 			fmanager::FileManager fman;
-			if (useDate) {
-				LogName = fileLoc;
-				LogName += smallutils::getDate();
-				LogName += "__";
-				LogName += string(smallutils::getTime());
-				LogName += ".log";
-			}
-			else {
+			if (useDate)
+				LogName = fileLoc + smallutils::getDate() + "__" + string(smallutils::getTime()) + ".log";
+			else
 				LogName = "LogFile.log";
-			}
+
 			fman.writeFile(LogName, " --- Log File Initialized --- \n");
 		}
 
@@ -122,28 +131,28 @@ namespace logger {
 		// End Singleton Code
 
 		void LogManager::LOGINFO(std::string loggerString, bool timestamp = true) {
-			if (LogLevel == Info || LogLevel == Warning || LogLevel == Error || LogLevel == Debug)
+			if (LogLevel >= Info)
 				SendLog("INFO", loggerString, timestamp);
 			else
 				SendLog("INFO", loggerString, timestamp, 0);
 		}
 
 		void LogManager::LOGWARNING(std::string loggerString, bool timestamp = true) {
-			if (LogLevel == Warning || LogLevel == Error || LogLevel == Debug)
+			if (LogLevel >= Warning)
 				SendLog("WARNING", loggerString, timestamp);
 			else
 				SendLog("WARNING", loggerString, timestamp, 0);
 		}
 
 		void LogManager::LOGERROR(std::string loggerString, bool timestamp = true) {
-			if (LogLevel == Error || LogLevel == Debug)
+			if (LogLevel >= Error)
 				SendLog("ERROR", loggerString, timestamp);
 			else
 				SendLog("ERROR", loggerString, timestamp, 0);
 		}
 
 		void LogManager::LOGDEBUG(std::string loggerString, bool timestamp = true) {
-			if (LogLevel == Debug)
+			if (LogLevel >= Debug)
 				SendLog("DEBUG", loggerString, timestamp);
 			else
 				SendLog("DEBUG", loggerString, timestamp, 0);

@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	
-	logger::LogManager Logs = logger::LogManager::get(logger::DefualtLogs::Info, logger::CustomLogs::CustomOn);
+	logger::LogManager Logs = logger::LogManager::get(logger::DefualtLogs::Warning, logger::CustomLogs::CustomOn);
 
 	Logs.LOGINFO("Info Log!!");
 	Logs.LOGWARNING("Warning Log!!");
