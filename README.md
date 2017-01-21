@@ -12,8 +12,7 @@ Version 2.02, Updated 01-20-17.
 
 ---------------------
 
-Usage:
---------
+Usage:--------
  **NOTE:** See provided main.cpp for example usage.
 
  Include *logManager.h*, as well as *simpleUtils.h*, and *fileManager.h*.
@@ -43,8 +42,8 @@ All Variables:
 
 **AllLogs:**
 ```cpp
-	AllLogs::AllOn <br>
-	AllLogs::AllOff <br>
+AllLogs::AllOn
+AllLogs::AllOff
 ```
 **DefaultLogs**
 ```cpp
