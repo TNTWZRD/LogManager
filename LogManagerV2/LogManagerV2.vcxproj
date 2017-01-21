@@ -114,10 +114,14 @@
   <ItemGroup>
     <ClInclude Include="src\fileManager.h" />
     <ClInclude Include="src\logManager.h" />
+    <ClInclude Include="src\RRThreadManager.hpp" />
     <ClInclude Include="src\smallUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
