@@ -33,7 +33,7 @@ namespace logger {
 Or for more control:
 ```cpp
 namespace logger {
-	LogManager LOGS = LogManager::get(DefualtLogs::DefualtOn, CustomLogs::CustomOn);
+	LogManager LOGS = LogManager::get(DefaultLogs::DefaultOn, CustomLogs::CustomOn);
 }
 ```
 
