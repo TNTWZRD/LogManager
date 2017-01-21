@@ -1,4 +1,4 @@
-**LogManagerV2**
+;**LogManagerV2**
 ===============
 Version 2.02, Updated 01-20-17.
 
@@ -42,8 +42,8 @@ All Variables:
 
 **AllLogs:**
 ```cpp
-AllLogs::AllOn
-AllLogs::AllOff
+AllLogs::AllOn;
+AllLogs::AllOff;
 ```
 **DefaultLogs**
 ```cpp
