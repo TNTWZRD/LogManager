@@ -101,4 +101,4 @@ namespace logger{
 ------------------------
 
 > Code Written and maintained by Daniel Jajlairdo, and Corbin Matchull @ TheTechSphere <br>
-> Copywrite 2017 Daniel Jajliardo @ TheTechSphere <br>
+> Copywrite 2017 TheTechSphere <br>
