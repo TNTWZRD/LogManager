@@ -48,7 +48,7 @@ namespace logger {
 			CustomEnabled = customEnabled;
 			fmanager::FileManager fman;
 			if (useDate)
-				LogName = fileLoc + smallutils::getDate() + "__" + string(smallutils::getTime()) + ".log";
+				LogName = fileLoc + smallutils::getDate() + "__" + std::string(smallutils::getTime()) + ".log";
 			else
 				LogName = "LogFile.log";
 			fman.writeFile(LogName, " --- Log File Initialized --- \n");
