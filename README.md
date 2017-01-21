@@ -19,11 +19,10 @@ Usage:
 
  **NOTE:** See provided main.cpp for example usage.
 
- Include *logManager.h*, as well as *simpleUtils.h*, and *fileManager.h*.
+ Include *logManager.h*.<br>
+ If you would like to use the extra fucntions in fileManager.h, and smallUtils.h, include them as well.
 ```cpp
 #include "src/logManager.h"
-#include "src/fileManager.h" 
-#include "src/smallUtils.h"
 ```
 
 Create a LogManager Object:
