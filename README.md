@@ -1,7 +1,7 @@
 
 **LogManagerV2**
 ===============
-Version 2.02, Updated 01-20-17.
+Version 2.03, Updated 01-21-17.
 
 **Functionality:**
 
