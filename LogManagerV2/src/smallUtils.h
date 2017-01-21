@@ -1,7 +1,7 @@
 // Code Written and maintained by Daniel Jajliardo @ TheTechSphere
 // Copywrite 2017 Daniel Jajliardo @ TheTechSphere
 // This is a small utiliy file.
-// Version 0.04 Updated 01/20/17 Daniel Jajliardo
+// Version 0.05 Updated 01/21/17 Daniel Jajliardo
 
 #include <string>
 #include <ctime>
