@@ -1,3 +1,4 @@
+
 **LogManagerV2**
 ===============
 Version 2.02, Updated 01-20-17.
@@ -12,7 +13,9 @@ Version 2.02, Updated 01-20-17.
 
 ---------------------
 
-Usage:--------
+Usage:
+--------
+
  **NOTE:** See provided main.cpp for example usage.
 
  Include *logManager.h*, as well as *simpleUtils.h*, and *fileManager.h*.
