@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "src\smallUtils.h"
-#include "src\logManager.h"
+#include "smallUtils.h"
+#include "logManager.h"
 
 using namespace std;
 
