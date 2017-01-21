@@ -1,4 +1,4 @@
-;**LogManagerV2**
+**LogManagerV2**
 ===============
 Version 2.02, Updated 01-20-17.
 
