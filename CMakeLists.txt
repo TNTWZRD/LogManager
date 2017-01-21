@@ -13,4 +13,3 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 enable_testing()
 
 add_subdirectory(LogManagerV2)
-add_subdirectory(src)
