@@ -58,8 +58,8 @@ NOTE: Enabling Debug enables everything below it, Error, Warning, Etc. This work
 
 **Custom**
 ```cpp
-	CustomLogs::CustomOn;
-	CustomLogs::CustomOff;
+CustomLogs::CustomOn;
+CustomLogs::CustomOff;
 ```
 Logging
 ---------
