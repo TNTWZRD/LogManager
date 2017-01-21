@@ -1,6 +1,7 @@
+
 **LogManagerV2**
 ===============
-Version 2.01, Updated 01-20-17.
+Version 2.02, Updated 01-20-17.
 
 **Functionality:**
 
@@ -14,13 +15,14 @@ Version 2.01, Updated 01-20-17.
 
 Usage:
 --------
+
  **NOTE:** See provided main.cpp for example usage.
 
  Include *logManager.h*, as well as *simpleUtils.h*, and *fileManager.h*.
 ```cpp
-#include "logManager.h"
-#include "fileManager.h" 
-#include "smallUtils.h"
+#include "src/logManager.h"
+#include "src/fileManager.h" 
+#include "src/smallUtils.h"
 ```
 
 Create a LogManager Object:
@@ -43,8 +45,8 @@ All Variables:
 
 **AllLogs:**
 ```cpp
-	AllLogs::AllOn <br>
-	AllLogs::AllOff <br>
+AllLogs::AllOn;
+AllLogs::AllOff;
 ```
 **DefaultLogs**
 ```cpp
@@ -59,8 +61,8 @@ NOTE: Enabling Debug enables everything below it, Error, Warning, Etc. This work
 
 **Custom**
 ```cpp
-	CustomLogs::CustomOn;
-	CustomLogs::CustomOff;
+CustomLogs::CustomOn;
+CustomLogs::CustomOff;
 ```
 Logging
 ---------
@@ -100,5 +102,5 @@ namespace logger{
 
 ------------------------
 
-> Code Written and maintained by Daniel Jajliardo @ TheTechSphere <br>
-> Copywrite 2017 Daniel Jajliardo @ TheTechSphere <br>
+> Code Written and maintained by Daniel Jajlairdo, and Corbin Matchull @ TheTechSphere <br>
+> Copywrite 2017 TheTechSphere <br>
