@@ -20,67 +20,67 @@ Usage:
  **NOTE:** See provided main.cpp for example usage.
 
  Include *logManager.h*, as well as *simpleUtils.h*, and *fileManager.h*.
-> \#include "logManager.h" 
-> \#include "fileManager.h" 
-> \#include "smallUtils.h"
+> \#include "logManager.h" <br>
+> \#include "fileManager.h" <br> 
+> \#include "smallUtils.h" <br>
 
 Create a LogManager Object:
-> namespace logger{
-> &emsp;&emsp;LogManager LOGS = LogManager::get(AllLogs::AllOn);
-> }
+> namespace logger{ <br>
+> &emsp;&emsp;LogManager LOGS = LogManager::get(AllLogs::AllOn); <br>
+> } <br>
 
 Or for more control:
-> namespace logger{
-> &emsp;&emsp;LogManager LOGS = LogManager::get(DefualtLogs::DefualtOn, CustomLogs::CustomOn);
-> }
+> namespace logger{ <br>
+> &emsp;&emsp;LogManager LOGS = LogManager::get(DefualtLogs::DefualtOn, CustomLogs::CustomOn); <br>
+> } <br>
 
 
 All Varaiables:
 -----------------
 
 **AllLogs:**
->AllLogs::AllOn
->AllLogs::AllOff
+>AllLogs::AllOn <br>
+>AllLogs::AllOff <br>
 
 **DefualtLogs**
->DefualtLogs::DefualtOn
->DefualtLogs::Info
->DefualtLogs::Warning
->DefualtLogs::Error
->DefualtLogs::Debug
->DefualtLogs::DefualtOff
+>DefualtLogs::DefualtOn <br>
+>DefualtLogs::Info <br>
+>DefualtLogs::Warning <br>
+>DefualtLogs::Error <br>
+>DefualtLogs::Debug <br>
+>DefualtLogs::DefualtOff <br>
 
     NOTE: Enabling Debug enables everything below it, Error, Warning, Etc. This works for all of them.
 
 **Custom**
->CustomLogs::CustomOn
->CustomLogs::CustomOff
+>CustomLogs::CustomOn <br>
+>CustomLogs::CustomOff <br>
 
 Logging
 ---------
 
 To send a log use:
->LOGS.LOGINFO("Info Log Works");
->LOGS.LOGWARNING("Warning Log Works");
->LOGS.LOGERROR("Error Log Works");
->LOGS.LOGDEBUG("Debug Log Works");
->LOGS.LOGCUSTOM("CUSTOM_LOGGER_NAME", "Custom Logger Works");
+>LOGS.LOGINFO("Info Log Works"); <br>
+>LOGS.LOGWARNING("Warning Log Works"); <br>
+>LOGS.LOGERROR("Error Log Works"); <br>
+>LOGS.LOGDEBUG("Debug Log Works"); <br>
+>LOGS.LOGCUSTOM("CUSTOM_LOGGER_NAME", "Custom Logger Works"); <br>
 
 If you would like to disable the timestamp use the following:
->LOGS.LOGINFO("Info Log Works", 0 );
->LOGS.LOGWARNING("Warning Log Works", 0);
->LOGS.LOGERROR("Error Log Works", 0);
->LOGS.LOGDEBUG("Debug Log Works", 0);
->LOGS.LOGCUSTOM("LOGGER_NAME", "Custom Logger Works", 0);
+>LOGS.LOGINFO("Info Log Works", 0 ); <br>
+>LOGS.LOGWARNING("Warning Log Works", 0); <br>
+>LOGS.LOGERROR("Error Log Works", 0); <br>
+>LOGS.LOGDEBUG("Debug Log Works", 0); <br>
+>LOGS.LOGCUSTOM("LOGGER_NAME", "Custom Logger Works", 0); <br>
 
 Other:
 --------
 
 **If you dont want to initailize a LogManager Variable you can use:**
 
-> namespace logger{
-> &emsp;&emsp;LogManager::get(AllLogs::AllOn).LOGINFO("No OBJ Log");
-> }
+> namespace logger{ <br>
+> &emsp;&emsp;LogManager::get(AllLogs::AllOn).LOGINFO("No OBJ Log"); <br>
+> } <br>
 
 **NOTE:** When you initialize the first object, or use the above code, you will be unable to change what log types are going to be shown. They are set once and may not be changed until you close the application and change the code/setting.
 
@@ -88,5 +88,5 @@ Other:
 
 ------------------------
 
-> Code Written and maintained by Daniel Jajliardo @ TheTechSphere
-> Copywrite 2017 Daniel Jajliardo @ TheTechSphere
+> Code Written and maintained by Daniel Jajliardo @ TheTechSphere <br>
+> Copywrite 2017 Daniel Jajliardo @ TheTechSphere <br>
