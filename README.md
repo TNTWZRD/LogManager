@@ -2,7 +2,9 @@
 **LogManagerV2**
 ===============
 Version 2.04, Updated 01-21-17.<br>
-<a href="http://www.github.com/TNTWZRD/LogManager/releases/latest"><img src="LatestRelease.png" alt="Latest Release"></a>
+
+<a href="http://www.github.com/TNTWZRD/LogManager/releases/latest"><img src="
+https://img.shields.io/badge/Build-V2.04-blue.svg??style=plastic" alt="Latest Release"></a>
 
 **Functionality:**
 
