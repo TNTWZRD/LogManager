@@ -1,7 +1,6 @@
 
 **LogManagerV2**
 ===============
-Version 2.04, Updated 01-21-17.<br>
 
 [![Latest Build](https://img.shields.io/badge/Build-Stable-brightgreen.svg?style=plastic)]()
 &emsp;
