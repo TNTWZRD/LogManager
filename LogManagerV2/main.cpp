@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "src\logManager.h"
+#include "src\smallUtils.h"
 
 int main() {
 	
@@ -10,7 +11,9 @@ int main() {
 	Logs.LOGWARNING("Warning Log!!");
 	Logs.LOGERROR("Error Log!!");
 	Logs.LOGDEBUG("Debug Log!!");
-	Logs.LOGCUSTOM("CUSTOM", "Custom Log!!");
+	Logs.LOGCUSTOM("CUSTOM", smallutils::getISODate());
+	Logs.LOGCUSTOM("CUSTOM", smallutils::getISOTime());
+	Logs.LOGCUSTOM("CUSTOM", smallutils::getISOTimeStamp());
 	Logs.LOGCUSTOM("CUSTOM", "Custom Log!!", 0);
 
 	std::cout << std::endl;

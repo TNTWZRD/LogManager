@@ -1,6 +1,6 @@
 // Code Written and maintained by Daniel Jajliardo & Corbin Matchull @ TheTechSphere
 // Copywrite 2017 TheTechSphere
-// Version 2.04 Updated 01/20/17 Daniel Jajliardo
+// Version 2.05 Updated 01/21/17 Daniel Jajliardo
 // Please See README.md for how to use
 
 #include <string>
@@ -31,12 +31,12 @@ namespace logger {
 		void LogManager::SendLog(std::string loggerName, std::string loggerString, bool timestamp, bool actualOutput = true) {
 			if (actualOutput) {
 				if (timestamp)
-					std::cout << "[" << smallutils::getTimeStamp() << "][" << loggerName << "]: " << loggerString << std::endl;
+					std::cout << "[" << smallutils::getISOTimeStamp() << "][" << loggerName << "]: " << loggerString << std::endl;
 				else
 					std::cout << "[" << loggerName << "]: " << loggerString << std::endl;
 			}
 			fmanager::FileManager fman;
-			fman.appendFile(LogName, "[" + smallutils::getTimeStamp() + "][" + loggerName + "]: " + loggerString);
+			fman.appendFile(LogName, "[" + smallutils::replaceInString(smallutils::getISOTimeStamp(), ':', '-') + "][" + loggerName + "]: " + loggerString);
 		}
 
 		// Constructor
@@ -48,7 +48,7 @@ namespace logger {
 			CustomEnabled = customEnabled;
 			fmanager::FileManager fman;
 			if (useDate)
-				LogName = fileLoc + smallutils::getDate() + "__" + std::string(smallutils::getTime()) + ".log";
+				LogName = fileLoc + smallutils::replaceInString(smallutils::getISOTimeStamp(), ':', '-') + ".log";
 			else
 				LogName = "LogFile.log";
 			fman.writeFile(LogName, " --- Log File Initialized --- \n");
